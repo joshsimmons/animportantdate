@@ -24,7 +24,7 @@ BASE_DIR = PACKAGE_ROOT
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'l4p65*wna)%drf@*c!o@&f1l&^_a$5w@k*q9vuicq$vc!cez-n'
+SECRET_KEY = 'bleepbloop'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
