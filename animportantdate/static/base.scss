@@ -1,0 +1,479 @@
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 30px;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Muli', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  > .container {
+    width: auto;
+    max-width: 940px;
+
+    > section {
+      position: relative;
+      top: 70px;
+    }
+
+    h1 small {
+      color: rgba(184, 188, 192, 1);
+    }
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 10001;
+
+    nav {
+      font-family: "Muli", sans-serif;
+      text-align: center;
+      box-shadow: 0 0 4px rgba(0, 0, 0, .07), 0 4px 8px rgba(0, 0, 0, .14);
+
+      .navbar-header {
+        width: 200px;
+
+        .navbar-brand {
+          font-style: italic;
+          font-weight: 300;
+          color: #337ab7;
+
+          &:focus,
+          &:hover {
+            color: #286090;
+          }
+        }
+      }
+
+      > .container-fluid {
+        list-style: none;
+        margin: 0;
+        overflow: scroll;
+        padding: 0;
+        top: 0;
+      }
+
+      #NavTrigger {
+        height: 50px;
+        padding-top: 16px;
+        position: absolute;
+        right: 0;
+        text-align: left;
+        top: 0;
+        width: 40px;
+      }
+
+      #NavTrigger:before,
+      #NavTrigger:after,
+      #NavTrigger span {
+        background: #4c4c4c;
+        border-radius: 50%;
+        content: '.';
+        height: 4px;
+        line-height: 4px;
+        margin: 2px auto;
+        width: 4px;
+        display: block;
+        overflow: hidden;
+        text-indent: -9999px;
+      }
+    }
+  }
+
+  #ShadowBox {
+    background: rgba(51,51,51,0.8);
+    content: '[]';
+    display: none;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0;
+    width: 100vw;
+    z-index: 98;
+  }
+
+  main {
+    color: rgba(248, 248, 248, 1);
+    background-color: rgba(51, 51, 51, .9);
+    padding: 15px;
+    margin: 110px 0 30px 0;
+
+    a {
+      color: rgba(201, 195, 231, 1);
+
+      &:hover,
+      &:focus {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    .alert {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+      margin-top: 0 !important;
+
+      &.alert-default {
+        color: #252525;
+        background-color: #fff;
+        border-color: #ddd;
+      }
+
+      a {
+        color: #000;
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .page-header {
+      margin-top: 0px;
+
+      h1 {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .panel,
+  .alert {
+    color: rgba(37, 37, 37, 1);
+
+    &.panel-float,
+    &.alert-float {
+      max-width: 33%;
+
+      &.panel-float-right,
+      &.alert-float-right {
+        float: right;
+        margin: 1em 0 1em 1em;
+      }
+
+      &.panel-float-left,
+      &.alert-float-left {
+        float: left;
+        margin: 1em 1em 1em 0;
+      }
+    }
+
+    a {
+      color: rgba(0, 0, 157, 1);
+
+      &.btn {
+        margin-top: 1em;
+        color: rgba(0, 0, 157, 1) !important;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .pull-glyph-right .glyphicon {
+    float: right;
+    margin-top: 2px;
+    margin-right: -6px;
+    margin-left: 6px;
+  }
+}
+
+body.home {
+  background-image: url(/static/images/home.jpg);
+  background-color: #58c8f6;
+
+  main {
+    background-color: inherit;
+  }
+
+  > .container {
+    max-width: inherit;
+  }
+
+  .page-header {
+    margin-top: 40px;
+  }
+
+  div#sidebar {
+    background-color: rgba(51, 51, 51, .9);
+    color: rgba(248, 248, 248, 1);
+    padding-bottom: 10px;
+    margin-top: 20px;
+    min-width: 250px;
+
+    .page-header {
+      margin-top: 20px;
+    }
+
+    .control-label {
+      display: none;
+    }
+  }
+}
+
+body.story {
+  background-image: url(/static/images/story.jpg);
+  background-color: #87c1e9;
+
+  h1, h2, h3, h4, h5, h6 {
+    clear: both;
+  }
+}
+
+body.detail {
+  background-image: url(/static/images/details.jpg);
+  background-color: #063d90;
+
+  main {
+    .panel-body > .datetime,
+    .panel-body > .address {
+      float: left;
+      display: block;
+    }
+  }
+}
+
+body.gift {
+  background-image: url(/static/images/gifts.jpg);
+  background-color: #58c8f6;
+}
+
+body.photo {
+  background-image: url(/static/images/photos.jpg);
+  background-color: #d8c5b7;
+}
+
+body.colophon {
+  background-image: url(/static/images/colophon.jpg);
+  background-color: #063d90;
+}
+
+body.guest {
+  background-image: url(/static/images/guest.jpg);
+  background-color: #0544ab;
+
+  .intro {
+    padding-bottom: 20px;
+
+    p {
+      display: block;
+      font-size: large;
+    }
+  }
+
+  #events {
+    dd + dt {
+      margin-top: 1em;
+    }
+  }
+}
+
+body.home li.home,
+body.story li.story,
+body.detail li.detail,
+body.registry li.registry,
+body.photo li.photo,
+body.guest li.guest,
+body.colophon li.colophon {
+  a,
+  a:hover,
+  a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+}
+
+@media (min-width: 768px) {
+  #NavTrigger {
+    display: none;
+  }
+
+  .navbar-header {
+    margin-right: -200px;
+  }
+
+  body nav > .container-fluid {
+    top: 0;
+    overflow: hidden;
+    position: inherit;
+    display: inline-block;
+    transform: translate(0, 0);
+    width: auto;
+  }
+}
+
+@media (max-width: 1080px) and (min-width: 768px) {
+  .navbar-header {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    header nav {
+      .navbar-header {
+        position: fixed;
+      }
+
+      > .container-fluid {
+      transform: translate(0, 0);
+      background-color: #f8f8f8;
+      right: 0;
+      display: none;
+      }
+    }
+
+    main {
+      h2 small {
+        display: none;
+      }
+
+      .panel,
+      .alert {
+        &.panel-float,
+        &.alert-float {
+          max-width: 100%;
+          width: 100%;
+
+          &.panel-float-right,
+          &.alert-float-right {
+            float: none;
+            margin: 1em 0 1em 0 !important;
+          }
+
+          &.panel-float-left,
+          &.alert-float-left {
+            float: none;
+            margin: 1em 0 1em 0 !important;
+          }
+        }
+      }
+    }
+
+    &.home {
+      background-position-x: 45%;
+
+      #sidebar {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &.home.nav-active {
+      #sidebar {
+        display: none;
+      }
+    }
+
+    &.guest {
+      main .row > * {
+        min-width: 100%;
+      }
+    }
+
+    &.story {
+      main img {
+        max-width: 100%;
+      }
+    }
+
+    &.detail {
+      main {
+        .panel-body {
+          > .datetime,
+          > .address {
+            float: left;
+            display: block;
+            min-width: 50%;
+            max-width: 350px;
+          }
+
+          > .address {
+            text-align: right;
+          }
+
+          > .datetime {
+          }
+
+          > .btn {
+            clear: both;
+            display: block;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  body.nav-active {
+    overflow: hidden;
+    position: fixed;
+
+    #ShadowBox {
+      display: block;
+    }
+
+    nav {
+      text-align: right;
+      max-height: 50px;
+
+      > .container-fluid {
+        display: inline-block;
+        top: 50px;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        overflow: hidden;
+        position: inherit;
+        transform: translate(0, 0);
+
+        ul li {
+          padding-left: 1em;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    &.detail {
+      main {
+        .panel-body {
+          > .datetime,
+          > .address {
+            float: left;
+            display: block;
+            min-width: 100%;
+            max-width: 350px;
+          }
+
+          > .address {
+            text-align: left;
+          }
+
+          > .datetime {
+          }
+
+          > .btn {
+            clear: both;
+            display: block;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+/* line 1, animportantdate/animportantdate/static/base.scss */
+body {
+  background-attachment: fixed;
+  background-size: cover; }
+  /* line 5, animportantdate/animportantdate/static/base.scss */
+  body > .container {
+    width: auto;
+    max-width: 940px; }
+    /* line 9, animportantdate/animportantdate/static/base.scss */
+    body > .container h1 small {
+      color: #b8bcc0; }
+  /* line 14, animportantdate/animportantdate/static/base.scss */
+  body nav {
+    text-align: center; }
+    /* line 17, animportantdate/animportantdate/static/base.scss */
+    body nav > .container-fluid {
+      display: inline-block; }
+  /* line 22, animportantdate/animportantdate/static/base.scss */
+  body button.pull-glyph-right .glyphicon {
+    float: right;
+    margin-top: 2px;
+    margin-right: -6px;
+    margin-left: 6px; }
+  /* line 29, animportantdate/animportantdate/static/base.scss */
+  body main {
+    color: #f8f8f8;
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 15px;
+    margin: 60px 0 30px 0; }
+    /* line 35, animportantdate/animportantdate/static/base.scss */
+    body main a {
+      color: #9debe9; }
+    /* line 39, animportantdate/animportantdate/static/base.scss */
+    body main .page-header {
+      margin-top: 0px; }
+      /* line 42, animportantdate/animportantdate/static/base.scss */
+      body main .page-header h1 {
+        margin-top: 10px; }
+  /* line 48, animportantdate/animportantdate/static/base.scss */
+  body panel {
+    color: #252525; }
+
+/* line 53, animportantdate/animportantdate/static/base.scss */
+body.home {
+  background-image: url('/static/images/home.jpg'); }
+  /* line 56, animportantdate/animportantdate/static/base.scss */
+  body.home main {
+    background-color: inherit; }
+  /* line 60, animportantdate/animportantdate/static/base.scss */
+  body.home > .container {
+    max-width: inherit; }
+  /* line 64, animportantdate/animportantdate/static/base.scss */
+  body.home .page-header {
+    margin-top: 40px; }
+  /* line 68, animportantdate/animportantdate/static/base.scss */
+  body.home div#sidebar {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #f8f8f8;
+    padding-bottom: 20px;
+    margin-top: 40px; }
+    /* line 74, animportantdate/animportantdate/static/base.scss */
+    body.home div#sidebar h1 {
+      font-size: x-large; }
+    /* line 78, animportantdate/animportantdate/static/base.scss */
+    body.home div#sidebar .control-label {
+      display: none; }
+
+/* line 84, animportantdate/animportantdate/static/base.scss */
+body.story {
+  background-image: url('/static/images/story.jpg');
+  background-color: #87c1e9; }
+
+/* line 89, animportantdate/animportantdate/static/base.scss */
+body.detail {
+  background-image: url('/static/images/details.jpg');
+  background-color: #063d90; }
+
+/* line 94, animportantdate/animportantdate/static/base.scss */
+body.gift {
+  background-image: url('/static/images/gifts.jpg');
+  background-color: #58c8f6; }
+
+/* line 99, animportantdate/animportantdate/static/base.scss */
+body.photo {
+  background-image: url('/static/images/photos.jpg');
+  background-color: #d8c5b7; }
+
+/* line 104, animportantdate/animportantdate/static/base.scss */
+body.guest {
+  background-image: url('/static/images/guest.jpg');
+  background-color: #58c8f6; }
+  /* line 108, animportantdate/animportantdate/static/base.scss */
+  body.guest .intro {
+    padding-bottom: 20px; }
+    /* line 111, animportantdate/animportantdate/static/base.scss */
+    body.guest .intro p {
+      display: block;
+      font-size: large; }
+  /* line 117, animportantdate/animportantdate/static/base.scss */
+  body.guest .event {
+    margin-bottom: 20px; }
+    /* line 120, animportantdate/animportantdate/static/base.scss */
+    body.guest .event h3 {
+      font-size: large;
+      margin-top: 0px; }
+    /* line 125, animportantdate/animportantdate/static/base.scss */
+    body.guest .event .datetime {
+      font-size: medium;
+      display: block; }
+    /* line 130, animportantdate/animportantdate/static/base.scss */
+    body.guest .event .venue {
+      font-size: medium;
+      display: block; }
+
+/* line 143, animportantdate/animportantdate/static/base.scss */
+body.home li.home a,
+body.home li.home a:hover,
+body.home li.home a:focus,
+body.story li.story a,
+body.story li.story a:hover,
+body.story li.story a:focus,
+body.detail li.detail a,
+body.detail li.detail a:hover,
+body.detail li.detail a:focus,
+body.registry li.registry a,
+body.registry li.registry a:hover,
+body.registry li.registry a:focus,
+body.photo li.photo a,
+body.photo li.photo a:hover,
+body.photo li.photo a:focus,
+body.guest li.guest a,
+body.guest li.guest a:hover,
+body.guest li.guest a:focus {
+  color: #555;
+  background-color: #e7e7e7; }

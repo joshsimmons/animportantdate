@@ -1,0 +1,52 @@
+{% extends "bootstrap_theme/base.html" %}
+
+{# Load the tag library #}
+{% load bootstrap3 %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Our Story
+    <small>Two Men and a Cat</small>
+  </h1>
+</div>
+
+<p>12,754 kilometres, 7,925 miles, 16 airports, 4 countries, 2 continents, and far too many conferences. Here&rsquo;s a little about the both of us and how we ended up together.</p>
+
+<h2>About Josh</h2>
+
+<p>
+  <a href="https://www.instagram.com/p/BUQJSYPAOYf/"><img src="{% static "images/josh_on_plane.jpg" %}" alt="Josh on a plane in May 2017" style="height: 150px; float: left; margin: 0 1em 1em 0;" /></a>Josh is a short and silly human born the youngest of four sons and raised in the North Bay. He&rsquo;s a pathological over-committer and armchair philosopher who is, allegedly, a fan of the great outdoors. Josh spent too much of his life in the closet and f(l)ailing as a freelance web developer before giving in to the queer agenda and finding his niche as a community organizer. He is also secretly a naturalist who harbors
+  <span title="... radical views on intellectual property. Ask if you dare <3">radical views on inte- SQUIRREL!</span>
+</p>
+
+<h2>About Chris</h2>
+
+<p>
+  <a href="https://www.instagram.com/p/BRgML0jA7u8/"><img src="{% static "images/chris_on_plane.jpg" %}" alt="Chris on a plane in March 2016" style="height: 150px; float: left; margin: 0 1em 1em 0;" /></a>Chris, though not that tall,
+  <em>is</em> taller than Josh. Like Josh, he also is human. He&rsquo;s the eldest of two, and after being born in Adelaide, spent his formative years in Hobart, Tasmania, an Australian island that bears an uncanny resemblance to the North Bay. Chris spent an unhealthy amount of his life avoiding addressing the question as to whether he&rsquo;d ever be in a relationship; whilst doing that he went through University in Hobart, and then spent several years supporting an international travel habit. He has numerous opinions about a great many things and would be happy to shar- LOOK, A DISTRACTION!
+</p>
+
+<h2>About the Cat</h2>
+
+<p>It is unclear whether Josh has a cat, or whether a cat has Josh. Nonetheless, that cat&rsquo;s name is
+  <a href="https://www.instagram.com/p/BMxttOgAE_r/">Pico</a> and he is a force to be reckoned with.</p>
+
+<h2>How We Met</h2>
+
+<p>
+  <a href="https://www.facebook.com/photo.php?fbid=10101242704946367&set=a.504530135647.2018670.24612563&type=3&permPage=1"><img src="{% static "images/oscon.jpg" %}" alt="Paul Fenwick on stage at OSCON 2014" style="width: 350px; float: right; margin: 0 0 .5em 1em;"/></a>We met in July of 2014 in Portland, Oregon at OSCON, a conference run by Josh&rsquo;s employer that Chris was speaking at. One night before the event Josh stumbled into a bunch of Taswegians at the hotel bar &ndash; he recognized them to be speakers and authors. They spent the evening regaling Josh with stories of Aussie politics and detailing the many ways a person could die in Australia (strangely there was never any mention of <a href="https://en.wikipedia.org/wiki/Drop_bear">drop bears</a>).
+</p>
+
+<p>Chris thought Josh was awfully cute and made several passes at Josh throughout the week, but Josh was thoroughly overwhelmed by his work and completely oblivious to Chris&rsquo;s overtures. Happily, Josh thought Chris was pretty damn cute too and they spent the next 12 months chatting each other up online.</p>
+
+<p>July of 2015 rolled around and, with it, another OSCON. Chris wasn&rsquo;t going to let Josh&rsquo;s obliviousness get in the way this time &ndash; he devised a clever plan to have dinner with a small group of friends. Cleverness be damned, his plan was quickly foiled by an onslaught of wonderful people. Mercifully, Chris only had to wait another day before he got some time alone with Josh... and they&rsquo;ve been together ever since.</p>
+
+<h2>After That...</h2>
+
+<p>
+  <a href="https://www.facebook.com/photo.php?fbid=10102532509901897&set=a.504530135647.2018670.24612563&type=3&permPage=1"><img src="{% static "images/paperwork.jpg" %}" alt="Our immigration paperwork in March 2017" style="width: 350px; float: left; margin: 0 1em .5em 0;"/></a>A long distance relationship between Australia and America means taking flights across the Pacific Ocean. Lots of flights across the Pacific Ocean, in fact. In May of 2016, we decided we&rsquo;d had enough of that. We got engaged and set our course for Chris to move in with Josh (and Pico) in Petaluma.
+</p>
+
+<p>After ten months and lots of immigration paperwork, Chris made the move. We&rsquo;ve been living together ever since, and we&rsquo;re really looking forward to you joining in a very special part of our story.</p>
+{% endblock %}

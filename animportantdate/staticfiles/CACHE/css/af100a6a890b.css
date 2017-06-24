@@ -1,0 +1,298 @@
+/* line 1, static/base.scss */
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif; }
+  /* line 8, static/base.scss */
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-family: 'Muli', sans-serif;
+    font-weight: 200;
+    font-style: italic; }
+  /* line 14, static/base.scss */
+  body > .container {
+    width: auto;
+    max-width: 940px; }
+    /* line 18, static/base.scss */
+    body > .container h1 small {
+      color: #b8bcc0; }
+  /* line 23, static/base.scss */
+  body nav {
+    text-align: center; }
+    /* line 26, static/base.scss */
+    body nav > .container-fluid {
+      display: inline-block; }
+  /* line 31, static/base.scss */
+  body button.pull-glyph-right .glyphicon {
+    float: right;
+    margin-top: 2px;
+    margin-right: -6px;
+    margin-left: 6px; }
+  /* line 38, static/base.scss */
+  body main {
+    color: #f8f8f8;
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 15px;
+    margin: 60px 0 30px 0; }
+    /* line 44, static/base.scss */
+    body main a {
+      color: #9debe9; }
+    /* line 48, static/base.scss */
+    body main .page-header {
+      margin-top: 0px; }
+      /* line 51, static/base.scss */
+      body main .page-header h1 {
+        margin-top: 10px; }
+  /* line 57, static/base.scss */
+  body .panel {
+    color: #252525; }
+
+/* line 62, static/base.scss */
+body.home {
+  background-image: url('/static/images/home.jpg');
+  background-color: #58c8f6; }
+  /* line 66, static/base.scss */
+  body.home main {
+    background-color: inherit; }
+  /* line 70, static/base.scss */
+  body.home > .container {
+    max-width: inherit; }
+  /* line 74, static/base.scss */
+  body.home .page-header {
+    margin-top: 40px; }
+  /* line 78, static/base.scss */
+  body.home div#sidebar {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #f8f8f8;
+    padding-bottom: 20px;
+    margin-top: 20px; }
+    /* line 84, static/base.scss */
+    body.home div#sidebar .control-label {
+      display: none; }
+
+/* line 90, static/base.scss */
+body.story {
+  background-image: url('/static/images/story.jpg');
+  background-color: #87c1e9; }
+
+/* line 95, static/base.scss */
+body.detail {
+  background-image: url('/static/images/details.jpg');
+  background-color: #063d90; }
+
+/* line 100, static/base.scss */
+body.gift {
+  background-image: url('/static/images/gifts.jpg');
+  background-color: #58c8f6; }
+
+/* line 105, static/base.scss */
+body.photo {
+  background-image: url('/static/images/photos.jpg');
+  background-color: #d8c5b7; }
+
+/* line 110, static/base.scss */
+body.guest {
+  background-image: url('/static/images/guest.jpg');
+  background-color: #58c8f6; }
+  /* line 114, static/base.scss */
+  body.guest .intro {
+    padding-bottom: 20px; }
+    /* line 117, static/base.scss */
+    body.guest .intro p {
+      display: block;
+      font-size: large; }
+  /* line 123, static/base.scss */
+  body.guest .event {
+    margin-bottom: 20px; }
+    /* line 126, static/base.scss */
+    body.guest .event h3 {
+      font-size: large;
+      margin-top: 0px; }
+    /* line 131, static/base.scss */
+    body.guest .event .datetime {
+      font-size: medium;
+      display: block; }
+    /* line 136, static/base.scss */
+    body.guest .event .venue {
+      font-size: medium;
+      display: block; }
+
+/* line 149, static/base.scss */
+body.home li.home a,
+body.home li.home a:hover,
+body.home li.home a:focus,
+body.story li.story a,
+body.story li.story a:hover,
+body.story li.story a:focus,
+body.detail li.detail a,
+body.detail li.detail a:hover,
+body.detail li.detail a:focus,
+body.registry li.registry a,
+body.registry li.registry a:hover,
+body.registry li.registry a:focus,
+body.photo li.photo a,
+body.photo li.photo a:hover,
+body.photo li.photo a:focus,
+body.guest li.guest a,
+body.guest li.guest a:hover,
+body.guest li.guest a:focus {
+  color: #555;
+  background-color: #e7e7e7; }
+
+/*
+
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="home"><a href="/">Home</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="header-main">
+  <h1><a href="https://opensource.google.com/" title="Google Open Source">opensource.google.com</a></h1>
+  <a href="/#Navigation" id="NavTrigger" title="Nav Toggle Open"><span>Menu</span></a>
+  <nav class="main-nav" id="Navigation">
+    <ul>
+      <li class="projects"><a href="https://opensource.google.com/projects/" title="Projects">Projects</a></li>
+    </ul>
+  </nav>
+</header>
+
+      .main-nav {
+        background: #ffffff;
+        height: 100vh;
+        list-style: none;
+        margin: 0;
+        overflow: scroll;
+        padding: 0;
+        position: fixed;
+        right: 0;
+        top: 75px;
+        transform: translate(277px, 0);
+        transition: transform 0.2s ease-in;
+        width: 277px;
+        z-index: 3;
+      }
+
+      .main-nav ul {
+        border-top: solid 4px #f2f2f2;
+        min-height: 360px;
+        padding-top: 10px;
+      }
+
+      .main-nav ul li {
+        line-height: 55px;
+      }
+
+      .main-nav ul li a {
+        background: white;
+        display: block;
+        font-size: 14px;
+        padding: 0 30px;
+      }
+
+      .main-nav ul li a:hover,
+      .main-nav ul li a:focus {
+        color: #4285f4;
+      }
+
+
+
+      .nav-active {
+        overflow: hidden;
+        position: fixed;
+      }
+
+      .nav-active .main-nav {
+        transform: translate(0, 0);
+      }
+
+      .nav-active #ShadowBox {
+        display: block;
+      }
+
+      #ShadowBox {
+        background: rgba(51,51,51,0.8);
+        content: '[]';
+        display: none;
+        height: 100vh;
+        left: 0;
+        position: absolute;
+        text-indent: -9999px;
+        top: 0;
+        width: 100vw;
+        z-index: 98;
+      }
+
+
+#NavTrigger {
+    height: 48px;
+    padding-top: 27px;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: 0;
+    width: 40px;
+}
+
+      #NavTrigger:before,
+      #NavTrigger:after,
+      #NavTrigger span {
+        background: #4c4c4c;
+        border-radius: 50%;
+        content: '.';
+        height: 4px;
+        line-height: 4px;
+        margin: 2px auto;
+        width: 4px;
+        display: block;
+        overflow: hidden;
+        text-indent: -9999px;
+      }
+
+
+      @media (min-width: 720px) {
+        .main-nav {
+          float: right;
+          height: 75px;
+          overflow: hidden;
+          position: inherit;
+          top: 0;
+          transform: translate(0, 0);
+          width: auto;
+        }
+
+        .main-nav ul {
+          border: none;
+          padding: 0;
+        }
+
+        .main-nav ul li {
+          display: inline-block;
+          line-height: 73px;
+          margin: 0 15px 0 0;
+          text-transform: uppercase;
+        }
+
+        .main-nav ul li a {
+          display: inline-block;
+          padding: 0;
+        }
+
+        #NavTrigger {
+          display: none;
+        }
+    }
+
+
+      @media (min-width: 940px) {
+
+
+        .main-nav ul li {
+          margin: 0 36px 0 0;
+        }
+
+
+ */

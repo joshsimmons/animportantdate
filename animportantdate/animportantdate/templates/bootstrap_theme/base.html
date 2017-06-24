@@ -1,0 +1,74 @@
+{% load bootstrap3 %}
+{% load static %}
+{% load compress %}
+
+<html>
+
+{% block html_head_base %}
+  <head>
+    <title>Josh and Chris are getting married | animportant.date</title>
+    <link type="image/x-icon" rel="icon" href="{% static "favicon.ico" %}"/>
+    <link type="image/x-icon" rel="shortcut icon" href="{% static "favicon.ico" %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300i|Open+Sans:300,700" rel="stylesheet"/>
+    {% bootstrap_css %}
+    {% compress css %}
+      <link rel="stylesheet" type="text/x-scss" href="{% static "base.scss" %}" />
+    {% endcompress %}
+    <meta content="width=device-width, height=device-height" name="viewport"/>
+  </head>
+  {% block html_head %}
+  {% endblock %}
+{% endblock %}
+
+{% block html_body %}
+  <body class="{{ body_class }}">
+    <header>
+      <nav class="navbar navbar-default navbar-static-top">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">
+            An Important Date
+          </a>
+        </div>
+        <a href="/#Navigation" id="NavTrigger" title="Nav Toggle Open"><span>Menu</span></a>
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li class="home"><a href="/">Home</a></li>
+            <li class="story"><a href="/story">Our Story</a></li>
+            <li class="detail"><a href="/details">Where &amp; When</a></li>
+            <li class="registry"><a href="/gifts">Gifts</a></li>
+            <li class="photo"><a href="/photos">Photos</a></li>
+            {% if request.session.group_id %}
+            <li class="guest"><a href="/guest">Your Information</a></li>
+            {% endif %}
+            <li class="colophon"><a href="/colophon">Colophon</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section>
+        {% block messages %}
+          {# Display django.contrib.messages as Bootstrap alerts #}
+          {% bootstrap_messages %}
+        {% endblock %}
+      </section>
+
+      <main>
+        {% block content_base %}
+          {% block content %}
+            <!-- content goes here -->
+          {% endblock content %}
+        {% endblock content_base %}
+      </main>
+    </div>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% bootstrap_javascript %}
+    {% compress js %}
+      <script type="text/javascript" src="{% static "base.js" %}"></script>
+    {% endcompress %}
+  </body>
+{% endblock html_body %}
+
+</html>

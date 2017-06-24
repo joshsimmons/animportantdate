@@ -1,0 +1,32 @@
+{% extends "bootstrap_theme/base.html" %}
+{% load bootstrap3 %}
+{% load wedding %}
+
+{% block content %}
+<div class="page-header">
+  <h1>Where &amp; When</h1>
+</div>
+
+{% if not request.session.group_id %}
+<p class="alert alert-info">To see details about the invite-only events, enter the confirmation code we sent on the
+  <a href="/">home</a> page.
+</p>
+{% else %}
+<p class="alert alert-info">Below you&rsquo;ll find details about the invite-only events including date, time, and location as well as travel and lodging advice. Make sure to keep
+  <a href="/guest">your information</a> up to date so we can stay in touch with you and yours.</p>
+{% endif %}
+
+<p>Our big day and celebrations are taking place in May of 2018 in Northern California. We&rsquo;re likely to organize some things in Australia later on, too. We&rsquo;ll have both open and invite-only events &ndash; you&rsquo;ll find details about all of the events on this page as plans come together.</p>
+
+<!-- private details redacted <3 -->
+
+<div>
+  <h2>Before and After</h2>
+  <h3>Petaluma, Sonoma County, and California</h3>
+
+  <p>Chris and Josh live in gorgeous Petaluma, a sickeningly quaint dairy town, around an hour north of the Golden Gate Bridge. Petaluma was founded in the 1850s, and is home to stunning Californian Victorian-era architecture which survived the 1906 and 1989 earthquakes that were catastrophic in the rest of the Bay Area. Petaluma is surrounded by hills, and defined by a river that flows into San Pablo Bay.</p>
+
+  <p>Petaluma is the southern-most city in Sonoma County, a mixed rural-suburban area, home to stunning nature reserves, much of the Californian craft brewing industry (Petaluma is home to Lagunitas), and also the largest region of Californian Wine Country (the Petaluma Gap wine region starts at the city limits). If you end up staying in or around Petaluma before or after the wedding, we&rsquo;ll be sure to point you at the best that our county has to offer.</p>
+</div>
+
+{% endblock content %}

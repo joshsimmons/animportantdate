@@ -1,0 +1,28 @@
+{% extends "bootstrap_theme/base.html" %}
+
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{% block content %}
+<div class="row">
+  <div class="col-xs-3" id="sidebar">
+    <div id="container">
+      <div class="page-header">
+        <h1>Chris and Josh are getting married!</h1>
+      </div>
+
+      <p>Enter your code to confirm your contact details, RSVP, and get more information about the events, travel, and lodging.</p>
+      <form method="GET" class="form">
+        {% bootstrap_form auth_form %}
+        {% buttons %}
+        <p>
+          <button type="submit" class="btn btn-primary pull-glyph-right">
+            {% bootstrap_icon "menu-right" %} Continue
+          </button>
+        </p>
+        {% endbuttons %}
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

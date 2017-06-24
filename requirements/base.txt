@@ -1,0 +1,7 @@
+django==1.11.*
+django-countries>=3.1.1
+pyuca>=1.1.2
+django-bootstrap3==8.2.*
+dj-database-url>=0.4.2
+whitenoise==3.3.*
+django-libsass==0.7

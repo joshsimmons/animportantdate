@@ -1,0 +1,141 @@
+/* line 1, animportantdate/animportantdate/static/base.scss */
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Muli', sans-serif; }
+  /* line 7, animportantdate/animportantdate/static/base.scss */
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-weight: 100;
+    font-style: italic; }
+  /* line 12, animportantdate/animportantdate/static/base.scss */
+  body > .container {
+    width: auto;
+    max-width: 940px; }
+    /* line 16, animportantdate/animportantdate/static/base.scss */
+    body > .container h1 small {
+      color: #b8bcc0; }
+  /* line 21, animportantdate/animportantdate/static/base.scss */
+  body nav {
+    text-align: center; }
+    /* line 24, animportantdate/animportantdate/static/base.scss */
+    body nav > .container-fluid {
+      display: inline-block; }
+  /* line 29, animportantdate/animportantdate/static/base.scss */
+  body button.pull-glyph-right .glyphicon {
+    float: right;
+    margin-top: 2px;
+    margin-right: -6px;
+    margin-left: 6px; }
+  /* line 36, animportantdate/animportantdate/static/base.scss */
+  body main {
+    color: #f8f8f8;
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 15px;
+    margin: 60px 0 30px 0; }
+    /* line 42, animportantdate/animportantdate/static/base.scss */
+    body main a {
+      color: #9debe9; }
+    /* line 46, animportantdate/animportantdate/static/base.scss */
+    body main .page-header {
+      margin-top: 0px; }
+      /* line 49, animportantdate/animportantdate/static/base.scss */
+      body main .page-header h1 {
+        margin-top: 10px; }
+  /* line 55, animportantdate/animportantdate/static/base.scss */
+  body .panel {
+    color: #252525; }
+
+/* line 60, animportantdate/animportantdate/static/base.scss */
+body.home {
+  background-image: url('/static/images/home.jpg');
+  background-color: #58c8f6; }
+  /* line 64, animportantdate/animportantdate/static/base.scss */
+  body.home main {
+    background-color: inherit; }
+  /* line 68, animportantdate/animportantdate/static/base.scss */
+  body.home > .container {
+    max-width: inherit; }
+  /* line 72, animportantdate/animportantdate/static/base.scss */
+  body.home .page-header {
+    margin-top: 40px; }
+  /* line 76, animportantdate/animportantdate/static/base.scss */
+  body.home div#sidebar {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #f8f8f8;
+    padding-bottom: 20px;
+    margin-top: 40px; }
+    /* line 82, animportantdate/animportantdate/static/base.scss */
+    body.home div#sidebar h1 {
+      font-size: x-large; }
+    /* line 86, animportantdate/animportantdate/static/base.scss */
+    body.home div#sidebar .control-label {
+      display: none; }
+
+/* line 92, animportantdate/animportantdate/static/base.scss */
+body.story {
+  background-image: url('/static/images/story.jpg');
+  background-color: #87c1e9; }
+
+/* line 97, animportantdate/animportantdate/static/base.scss */
+body.detail {
+  background-image: url('/static/images/details.jpg');
+  background-color: #063d90; }
+
+/* line 102, animportantdate/animportantdate/static/base.scss */
+body.gift {
+  background-image: url('/static/images/gifts.jpg');
+  background-color: #58c8f6; }
+
+/* line 107, animportantdate/animportantdate/static/base.scss */
+body.photo {
+  background-image: url('/static/images/photos.jpg');
+  background-color: #d8c5b7; }
+
+/* line 112, animportantdate/animportantdate/static/base.scss */
+body.guest {
+  background-image: url('/static/images/guest.jpg');
+  background-color: #58c8f6; }
+  /* line 116, animportantdate/animportantdate/static/base.scss */
+  body.guest .intro {
+    padding-bottom: 20px; }
+    /* line 119, animportantdate/animportantdate/static/base.scss */
+    body.guest .intro p {
+      display: block;
+      font-size: large; }
+  /* line 125, animportantdate/animportantdate/static/base.scss */
+  body.guest .event {
+    margin-bottom: 20px; }
+    /* line 128, animportantdate/animportantdate/static/base.scss */
+    body.guest .event h3 {
+      font-size: large;
+      margin-top: 0px; }
+    /* line 133, animportantdate/animportantdate/static/base.scss */
+    body.guest .event .datetime {
+      font-size: medium;
+      display: block; }
+    /* line 138, animportantdate/animportantdate/static/base.scss */
+    body.guest .event .venue {
+      font-size: medium;
+      display: block; }
+
+/* line 151, animportantdate/animportantdate/static/base.scss */
+body.home li.home a,
+body.home li.home a:hover,
+body.home li.home a:focus,
+body.story li.story a,
+body.story li.story a:hover,
+body.story li.story a:focus,
+body.detail li.detail a,
+body.detail li.detail a:hover,
+body.detail li.detail a:focus,
+body.registry li.registry a,
+body.registry li.registry a:hover,
+body.registry li.registry a:focus,
+body.photo li.photo a,
+body.photo li.photo a:hover,
+body.photo li.photo a:focus,
+body.guest li.guest a,
+body.guest li.guest a:hover,
+body.guest li.guest a:focus {
+  color: #555;
+  background-color: #e7e7e7; }

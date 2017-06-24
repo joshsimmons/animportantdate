@@ -1,0 +1,50 @@
+{% extends "bootstrap_theme/base.html" %}
+
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{% block content %}
+  <h1>Send mail to attendees</h1>
+  <h2>Mailout name: {{ mailout.name }}</h2>
+  {% if mailout_form %}
+    <form method="post" class="form">
+      {% csrf_token %}
+      {% bootstrap_form mailout_form %}
+      {% buttons %}
+        <button type="submit" class="btn btn-primary">
+          {% bootstrap_icon "star" %} Submit
+        </button>
+        <a href="{% url 'admin:wedding_mailout_change' mailout.id %}" class="btn btn-info" role="button">
+          {% bootstrap_icon "edit" %} Return to admin page
+        </a>
+
+      {% endbuttons %}
+    </form>
+  {% endif %}
+
+  {% if mailouts %}
+    <h3>Message previews</h3>
+    {% for message in mailouts %}
+      <dl>
+        <dt>From</dt><dd>{{ message.from_ }}</dd>
+        <dt>To</dt><dd>{{ message.recipient.email }}</dd>
+        <dt>Bcc</dt>
+        <dd>
+          {% for bcc in message.bcc %}
+            {{ bcc }}{% if not forloop.last %}, {% endif %}
+          {% endfor %}
+        </dd>
+        <dt>Subject</dt><dd>{{ message.subject }}</dd>
+        <dt>Body</dt><dd>
+            <pre>
+{{ message.body }}
+            </pre>
+        </dd>
+      </dl>
+      {% if not forloop.last %}
+        <hr />
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "bootstrap_theme/base.html" %}
+{% load bootstrap3 %}
+
+{% block content %}
+<div class="page-header">
+  <h1>You&rsquo;re invited!</h1>
+</div>
+
+<div class="intro">
+  <p>We are getting married, and we want you, {{ group.display_name }}, to join us! We&rsquo;ll be using this website to help you arrange travel and lodging. Below is a summary of events and a form for you to fill out your contact information.</p>
+
+  {% if group.person_set.all %}
+    <h3>People in your group:</h3>
+    <ul>
+      {% for person in group.person_set.all %}
+        <li>{{ person.name }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <p>Please complete the form so that we can send your invitations and keep in touch:</p>
+</div>
+
+<div class="row">
+  <div class="col-xs-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Contact Information</h3>
+      </div>
+      <div class="panel-body">
+        <form method="POST">
+          {% csrf_token %}
+          {% bootstrap_form group_form %}
+
+          {% buttons %}
+          <button type="submit" class="btn btn-primary pull-glyph-right">
+            {% bootstrap_icon "pencil" %} Save Details
+          </button>
+          {% endbuttons %}
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <aside class="col-xs-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Summary of Events</h3>
+      </div>
+      <div class="panel-body">
+        <dl id="events">
+          {% for event in group.events.all %}
+          <dt>{{ event.name }}</dt>
+          <dd>{{ event.date_time }}<br/>
+            {{ event.venue }}
+          </dd>
+          {% endfor %}
+        </dl>
+        <a href="/details" title="Where &amp; When" class="btn btn-default">
+          <span class="glyphicon glyphicon-calendar"></span> More Information
+        </a>
+      </div>
+    </div>
+  </aside>
+</div>
+{% endblock content %}
