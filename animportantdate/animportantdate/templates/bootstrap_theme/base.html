@@ -7,14 +7,20 @@
 {% block html_head_base %}
   <head>
     <title>Josh and Chris are getting married | animportant.date</title>
-    <link type="image/x-icon" rel="icon" href="{% static "favicon.ico" %}"/>
-    <link type="image/x-icon" rel="shortcut icon" href="{% static "favicon.ico" %}"/>
-    <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300i|Open+Sans:300,700" rel="stylesheet"/>
+    <link type="image/x-icon" rel="icon" href="{% static "favicon.ico" %}">
+    <link type="image/x-icon" rel="shortcut icon" href="{% static "favicon.ico" %}">
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300i|Open+Sans:300,700" rel="stylesheet">
     {% bootstrap_css %}
     {% compress css %}
-      <link rel="stylesheet" type="text/x-scss" href="{% static "base.scss" %}" />
+      <link rel="stylesheet" type="text/x-scss" href="{% static "base.scss" %}">
     {% endcompress %}
-    <meta content="width=device-width, height=device-height" name="viewport"/>
+
+    <meta property="og:title" content="Josh and Chris are getting married | animportant.date">
+    <meta property="og:site_name" content="Josh and Chris are getting married | animportant.date">
+    <meta property="og:image" content="{% static "images/og_image.jpg" %}">
+    <meta property="og:url" content="https://animportant.date/">
+
+    <meta content="width=device-width, height=device-height" name="viewport">
   </head>
   {% block html_head %}
   {% endblock %}
